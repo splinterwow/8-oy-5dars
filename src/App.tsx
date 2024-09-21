@@ -1,25 +1,11 @@
-import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import Filters from './components/Filter';
-import Products from './components/Products';
+import ProductPage from "./components/ProductsPage"
 
-const App: React.FC = () => {
-  const [products] = useState([
-    { id: 1, name: 'Lamp', price: 100, image: 'lamp.jpg' },
-    { id: 2, name: 'Poster', price: 50, image: 'poster.jpg' },
-    { id: 3, name: 'Chair', price: 200, image: 'chair.jpg' },
-    // Qo'shimcha mahsulotlar
-  ]);
-
+function App() {
   return (
     <div>
-      <Navbar />
-      <div className="container mx-auto p-4">
-        <Filters />
-        <Products products={products} />
-      </div>
+      <ProductPage />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
